@@ -11,7 +11,7 @@ import static org.example.expert.domain.todo.entity.QTodo.todo;
 
 @Repository
 @RequiredArgsConstructor
-public class TotoRepositoryQueryImpl implements TodoRepositoryQuery {
+public class TodoRepositoryQueryImpl implements TodoRepositoryQuery {
 
     private final JPAQueryFactory jpaQueryFactory;
 
