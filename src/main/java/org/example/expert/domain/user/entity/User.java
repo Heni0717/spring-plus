@@ -37,7 +37,8 @@ public class User extends Timestamped {
     }
 
     public static User fromAuthUser(AuthUser authUser) {
-        return new User(authUser.getId(), authUser.getEmail(), authUser.getUserRole(), authUser.getNickname());
+        String role = authUser.getAuthorities().iterator().next().getAuthority();
+        return new User(authUser.getId(), authUser.getEmail(), UserRole.of(role), authUser.getNickname());
     }
 
     public void changePassword(String password) {
